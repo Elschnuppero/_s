@@ -1,0 +1,24 @@
+{
+  "name": "_s",
+  "homepage": "https://github.com/Elschnuppero/_s",
+  "authors": [
+    "elschnuppero <elschnuppero@autistici.org>"
+  ],
+  "description": "",
+  "main": "",
+  "dependencies": {
+    "susy": "~2.2.2"
+	},
+  "keywords": [
+    "wordpress"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

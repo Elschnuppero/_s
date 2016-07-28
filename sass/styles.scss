@@ -41,7 +41,16 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Media
 	## Captions
 	## Galleries
---------------------------------------------------------------*/
+-------------------------------------------------------------
+-*/
+
+
+// Grid Susy Import
+///////////////////////////////////////////////
+@import "../bower_components/susy/sass/susy";
+
+
+
 @import "variables-site/variables-site";
 @import "mixins/mixins-master";
 
@@ -104,3 +113,4 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Media
 --------------------------------------------------------------*/
 @import "media/media";
+

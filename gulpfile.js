@@ -44,7 +44,7 @@ gulp.task('watch', ['browserSync', 'sass'], function(){
 gulp.task('browserSync', function() {
     browserSync.init( {
         //browsersync with a php server
-        proxy: "localhost/testsage",
+        proxy: "localhost/_s",
         notify: false,
 		host: "192.168.2.108"
     });

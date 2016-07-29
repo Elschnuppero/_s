@@ -1,0 +1,165 @@
+@mixin artShadow {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+
+
+// Button Hover
+
+@mixin btnhover {
+    
+    color:#fff;
+    @include transImg(.3s);
+    &:hover {
+        background: $secondcolor;
+        color:#fff;
+    }
+    &:focus {
+        background: $secondcolor;
+        color:#fff;
+    }
+}
+
+// Textshadow on Images
+
+@mixin txtshadow {
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 1);
+}
+
+@mixin klicklink($bordercolor,$fontcolor) {
+    @include btnhover;
+    padding: 8px 12px;
+    border:1px solid $bordercolor;
+    border-radius: 3px;
+    color: $fontcolor;
+    @include txtshadow;
+}
+
+// H2 Frontpage Mixin
+
+@mixin hzweifront() {
+    text-align: center;
+    font-family: $raleway;
+    font-weight:500;
+    font-size:1.3rem;
+    padding: 10px;
+    @include breakpoint (medium only) {
+        font-size:1.6rem;
+        padding: 20px 20px 10px;
+    }
+    @include breakpoint (large up) {
+        font-size:2rem;
+        padding: 30px 30px 10px;
+    }
+}
+
+@mixin hdreifront() {
+    text-align: center;
+    font-family: $raleway;
+    font-weight:500;
+    font-size:1rem;
+    padding: 0 10px;
+    @include breakpoint (medium only) {
+        font-size:1.4rem;
+        padding: 0 20px;
+    }
+    @include breakpoint (large up) {
+        font-size:1.7rem;
+        padding: 0 30px;
+    }
+}
+
+// Headings with after
+
+@mixin headafter() {
+    @include breakpoint (small up) {
+        position: relative;
+        display: block;
+        &:after {
+            content: '';
+            position: absolute;
+            width:40px;
+            height: 2px;
+            background: $thirdcolor;
+            bottom: 5px;
+            right:0;
+            left:0;
+            margin: 0 auto;
+        }
+    }
+}
+
+
+// Button reset 
+
+@mixin cleanbtn {
+    box-shadow: none;
+    border:0;
+    text-shadow: none;
+    background: transparent;
+}
+
+// Fontsize
+
+@mixin font-size($size:1.6, $line: $size * 1.5){
+    font-size:   ($size * 10) + px;
+    line-height: ($line * 10) + px;
+    font-size:   $size + rem;
+    line-height: $line + rem;
+}
+
+// Zentrieren
+
+@mixin vertical-align {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+
+// Transition global
+
+@mixin transition ($transition-property, $transition-time, $method) {
+    -webkit-transition: $transition-property $transition-time $method;
+    -moz-transition: $transition-property $transition-time $method;
+    -ms-transition: $transition-property $transition-time $method;
+    -o-transition: $transition-property $transition-time $method;
+    transition: $transition-property $transition-time $method;
+}
+
+// Transition Standard for Images and Links
+
+@mixin transImg($time) {
+    @include transition(all, $time, ease-in-out);
+}
+
+
+// Transform Standard for Images and Links
+@mixin transform($transforms) {
+    -moz-transform: $transforms;
+    -o-transform: $transforms;
+    -ms-transform: $transforms;
+    -webkit-transform: $transforms;
+    transform: $transforms;
+}
+// Scale Standard for Images and Links
+
+@mixin scale($scale) {
+    @include transform(scale($scale));
+}
+
+
+
+// Clearfix
+
+@mixin clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+

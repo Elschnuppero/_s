@@ -44,7 +44,11 @@ gulp.task('watch', ['browserSync', 'sass'], function(){
 gulp.task('browserSync', function() {
     browserSync.init( {
         //browsersync with a php server
+<<<<<<< HEAD
         proxy: "localhost/###",
+=======
+        proxy: "localhost/ _s",
+>>>>>>> el_build
         notify: false,
 		host: "192.168.2.108"
     });
